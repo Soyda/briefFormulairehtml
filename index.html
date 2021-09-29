@@ -8,110 +8,112 @@
 
     <body>
         
-        <form action="/login" method="post">
-            <table>
-                
-                <th colspan="2">Formulaire d'inscription</th>
-                
+        <form action="#" method="post">
+            <h2>Formulaire d'inscription</h2>
+            <table>                
                 <tr>
-            <td><label for="prenom">Prénom*</label></td>
-            <td><input type="text" name="prenom" id="prenom" placeholder="Paul" required></td>
+                    <td><label for="firstname">Prénom*</label></td>
+                    <td><input type="text" name="firstname" id="firstname" placeholder="Paul" required></td>
                 </tr>
                 <tr>
-            <td><label for="nom">Nom*</label></td>
-            <td><input type="text" name="nom" id="nom" placeholder="Dupont" required></td>
+                    <td><label for="lastname">Nom*</label></td>
+                    <td><input type="text" name="lastname" id="lastname" placeholder="Dupont" required></td>
                 </tr>
                 <tr>
-            <td><label for="age">Âge</label></td>
-            <td><input type="number" name="age" id="age" step="1" min="0" max="150" placeholder="25"></td>
+                    <td><label for="age">Âge</label></td>
+                    <td><input type="number" name="age" id="age" step="1" min="0" max="150" placeholder="25"></td>
                 </tr>
                 <tr>
-            <td><label for="sexe">Sexe</label></td>
-            <td><select name="sexe" id="sexe">
-                <option value=" " selected>-----</option>
-                <option value="masculin" >Masculin</option>
-                <option value="feminin">Féminin</option>
-                <option value="autre" >Autre</option>
-            </select></td>
+                    <td><label>Civilité</label></td>
+                    <td>
+                        <input type="radio" name="civiltitle" value="m"> M.
+                        <input type="radio" name="civiltitle" value="mme"> Mme
+                        <input type="radio" name="civiltitle" value="mlle"> Mlle
+                        <input type="radio" name="civiltitle" value="other" checked> Autre
+                    </td>
                 </tr>
                 <tr>
-            <td><label for="email">Adresse E-mail*</label></td>
-            <td><input type="email" name="email" id="email" placeholder="coucou@gmail.com" required></td>
+                    <td><label for="email">Adresse E-mail*</label></td>
+                    <td><input type="email" name="email" id="email" placeholder="pauldupont@gmail.com" required></td>
                 </tr>  
                 <tr>    
-            <td><label for="adresse">Adresse postale</label></td>
-            <td><input type="text" name="adresse" id="adresse" placeholder="1er rue du Général Leclerc"></td>
-               </tr>    
-            <td><label for="codepostal">Code postal</label></td>
-            <td><input type="tel" name="codepostal" id="codepostal" minlength="5" maxlength="5" placeholder="75000"></td>
-                <tr>
-            <td><label for="ville">Ville</label></td>
-            <td><input type="text" name="ville" id="ville" placeholder="Paris"></td>
+                    <td><label for="adress">Adresse postale</label></td>
+                    <td><input type="text" name="adress" id="adress" placeholder="1er rue du Général Leclerc"></td>
                 </tr>
                 <tr>
-            <td><label for="metier">Métier exercé</label></td>
-            <td><select name="metier" id="metier">
-                <option value=" " selected>-----</option>
-                <option value="chefproduit">Chef de produit</option>
-                <option value="dataanalystesport">Data analyst jeux vidéo</option>
-                <option value="ergotherapeute">Ergothérapeute</option>
-                <option value="gendarme">Gendarme</option>
-                <option value="mechanic">Mécanicien.ne moteur</option>
-                <option value="paysagiste">Paysagiste</option>
-                <option value="autre">Autre</option>
-            </select></td>
+                    <td><label for="postalcode">Code postal</label></td>
+                    <td><input type="text" name="postalcode" id="postalcode" pattern=[0-9]{5} minlength="5" maxlength="5" placeholder="75000" title="Veuillez utiliser uniquement des chiffres"></td>
                 </tr>
                 <tr>
-            <td><label for="nationalite">Nationalité</label></td>
-            <td><select name="nationalite" id="nationalite">
-                <option value=" " selected>-----</option>
-                <option value="albanaise">Albanaise</option>
-                <option value="espagnole">Espagnole</option>
-                <option value="francaise">Française</option>
-                <option value="grecque">Grecque</option>
-                <option value="indien">Indien</option>
-                <option value="malgache">Malgache</option>
-                <option value="autre">Autre</option>
-            </select></td>
+                    <td><label for="city">Ville</label></td>
+                    <td><input type="text" name="city" id="city" placeholder="Paris"></td>
                 </tr>
                 <tr>
-            <td><label for="datenaissance">Date de naissance</label></td>
-            <td><input type="date" name="datenaissance" id="datenaissance"></td>
+                    <td><label for="job">Métier exercé</label></td>
+                    <td>
+                        <select name="job" id="job">
+                        <option value="productmanager">Chef de produit</option>
+                        <option value="dataanalystgames">Data analyst jeux vidéo</option>
+                        <option value="occupationaltherrapist">Ergothérapeute</option>
+                        <option value="ruralpolice">Gendarme</option>
+                        <option value="mechanic">Mécanicien.ne moteur</option>
+                        <option value="landscaper">Paysagiste</option>
+                        <option value="other" selected>Autre</option>
+                        </select>
+                    </td>
                 </tr>
                 <tr>
-            <td><label for="paysnaissance">Pays de naissance</label></td>
-            <td><select name="paysnaissance" id="paysnaissance">
-                <option value=" " selected>-----</option>
-                <option value="albanie">Albanie</option>
-                <option value="espagne">Espagne</option>
-                <option value="france">France</option>
-                <option value="grece">Grèce</option>
-                <option value="inde">Inde</option>
-                <option value="madagascar">Madagascar</option>
-                <option value="autre">Autre</option>
-            </select></td>
+                    <td><label for="nationality">Nationalité</label></td>
+                    <td>
+                        <select name="nationality" id="nationality">
+                        <option value="albanian">Albanaise</option>
+                        <option value="spanish">Espagnole</option>
+                        <option value="french" selected>Française</option>
+                        <option value="greek">Grecque</option>
+                        <option value="indian">Indienne</option>
+                        <option value="madagascan">Malgache</option>
+                        <option value="other">Autre</option>
+                        </select>
+                    </td>
                 </tr>
                 <tr>
-            <td><label for="numerosecu">Numéro de sécurité social</label></td>
-            <td><input type="tel" name="numerosecu" id="numerosecu" minlength="13" maxlength="13" placeholder="13 chiffres"></td>
+                    <td><label for="birthdate">Date de naissance</label></td>
+                    <td><input type="date" name="birthdate" id="birthdate"></td>
                 </tr>
                 <tr>
-            <td><label for="numeropassport">Numéro du passeport</label></td>
-            <td><input type="tel" name="numeropassport" id="numeropassport" minlength="9" maxlength="9" placeholder="9 chiffres et lettres"></td>
+                    <td><label for="birthcountry">Pays de naissance</label></td>
+                    <td>
+                        <select name="birthcountry" id="birthcountry">
+                        <option value="albania">Albanie</option>
+                        <option value="spain">Espagne</option>
+                        <option value="france" selected>France</option>
+                        <option value="greece">Grèce</option>
+                        <option value="india">Inde</option>
+                        <option value="madagascar">Madagascar</option>
+                        <option value="other">Autre</option>
+                        </select>
+                    </td>
                 </tr>
                 <tr>
-            <td><label for="datedebutpassport">Date de délivrance du passeport</label></td>
-            <td><input type="date" name="datedebutpassport" id="datedebutpassport"></td>
+                    <td><label for="socialsecuritynumber">Numéro de sécurité social</label></td>
+                    <td><input type="text" name="socialsecuritynumber" id="socialsecuritynumber" pattern=[0-9]{13} minlength="13" maxlength="13" placeholder="13 chiffres" title="Veuillez utiliser uniquement des chiffres"></td>
                 </tr>
                 <tr>
-            <td><label for="datefinpassport">Date de fin de validité du passeport</label></td>
-            <td><input type="date" name="datefinpassport" id="datefinpassport"></td>
+                    <td><label for="passportnumber">Numéro du passeport</label></td>
+                    <td><input type="text" name="passportnumber" id="passportnumber" minlength="9" maxlength="9" placeholder="9 chiffres et lettres"></td>
                 </tr>
                 <tr>
-            <td><input type="submit" name="submit" value="Envoyer">
-                <input type="reset" name="reset" value="Réinitialiser"></td>
+                    <td><label for="issueddatepassport">Date de délivrance du passeport</label></td>
+                    <td><input type="date" name="issueddatepassport" id="issueddatepassport"></td>
                 </tr>
-                
+                <tr>
+                    <td><label for="expirydatepassport">Date de fin de validité du passeport</label></td>
+                    <td><input type="date" name="expirydatepassport" id="expirydatepassport"></td>
+                </tr>
+                <tr>
+                    <td><input type="submit" name="submit" value="Envoyer"></td>
+                    <td><input type="reset" name="reset" value="Réinitialiser"></td>
+                </tr>               
             </table>
         </form>
        
